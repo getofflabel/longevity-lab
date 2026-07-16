@@ -288,7 +288,7 @@ function initShell() {
 function productCardHTML(p, opts) {
   opts = opts || {};
   var badge = p.badge ? '<span class="badge">' + esc(p.badge) + '</span>' : "";
-  return '<div class="product-card' + (opts.lineup ? " lineup-card" : "") + '">' +
+  return '<div class="product-card' + (opts.lineup ? " lineup-card" : "") + (p.badge && !opts.lineup ? " featured" : "") + '">' +
     '<a class="card-link" href="product.html?id=' + esc(p.id) + '">' +
       '<div class="card-art">' + badge + productImg(p) + '</div>' +
       '<div class="card-body">' +
@@ -631,7 +631,7 @@ function initCheckout() {
     document.getElementById("checkoutMain").innerHTML =
       '<div class="order-success">' +
         '<div class="success-check" aria-hidden="true">' +
-          '<svg viewBox="0 0 24 24" width="34" height="34"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+          '<svg viewBox="0 0 24 24" width="34" height="34"><path d="M4 12.5l5 5L20 6.5" stroke="#0E1526" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
         '</div>' +
         '<h1>Order placed. Welcome to Longevity Lab.</h1>' +
         '<p>A confirmation is on its way to your inbox. Your order ships within 1 business day.</p>' +
