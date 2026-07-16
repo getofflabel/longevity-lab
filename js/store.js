@@ -631,7 +631,7 @@ function initCheckout() {
     document.getElementById("checkoutMain").innerHTML =
       '<div class="order-success">' +
         '<div class="success-check" aria-hidden="true">' +
-          '<svg viewBox="0 0 24 24" width="34" height="34"><path d="M4 12.5l5 5L20 6.5" stroke="#16201A" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+          '<svg viewBox="0 0 24 24" width="34" height="34"><path d="M4 12.5l5 5L20 6.5" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
         '</div>' +
         '<h1>Order placed. Welcome to Longevity Lab.</h1>' +
         '<p>A confirmation is on its way to your inbox. Your order ships within 1 business day.</p>' +

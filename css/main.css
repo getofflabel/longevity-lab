@@ -7,18 +7,18 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bone: #222D25;              /* page canvas: matte green */
-  --white: #2C3A30;             /* raised panels: lighter matte green */
-  --ink: rgba(242, 239, 230, 0.95);
-  --ink-soft: rgba(242, 239, 230, 0.62);
-  --line: rgba(185, 145, 63, 0.35);
-  --line-soft: rgba(185, 145, 63, 0.2);
-  --evergreen: #222D25;
+  --bone: #F4F2EA;              /* page canvas: warm ivory */
+  --white: #FFFFFF;             /* raised panels: white cards */
+  --ink: rgba(22, 32, 26, 0.92);
+  --ink-soft: rgba(22, 32, 26, 0.58);
+  --line: rgba(22, 32, 26, 0.14);
+  --line-soft: rgba(22, 32, 26, 0.08);
+  --evergreen: #223028;
   --evergreen-deep: #16201A;
   --evergreen-mid: #33443A;
   --gold: #B9913F;
   --gold-grad: #B9913F;
-  --footer-bg: #121A14;
+  --footer-bg: #16201A;
   --radius: 22px;
   --pill: 48px;
   --maxw: 1280px;
@@ -55,8 +55,8 @@ section { padding: 96px 0 0; }
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   white-space: nowrap;
 }
-.btn-primary { background: var(--gold-grad); color: var(--evergreen-deep); }
-.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35); }
+.btn-primary { background: var(--evergreen-deep); color: #fff; }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(22, 32, 26, 0.28); }
 .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
 .btn-secondary { background: var(--white); color: var(--ink); border: 1px solid rgba(185, 145, 63, 0.4); }
 .btn-secondary:hover { border-color: rgba(16, 21, 15, 0.35); }
@@ -292,11 +292,11 @@ section { padding: 96px 0 0; }
   border: 1px solid var(--line-soft); padding: 30px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.expert-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(242, 239, 230, 0.12); }
+.expert-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(16, 21, 15, 0.1); }
 .avatar {
   width: 72px; height: 72px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 24px; font-weight: 700; color: var(--evergreen-deep); margin-bottom: 18px;
+  font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 18px;
 }
 .expert-card h3 { font-size: 19px; font-weight: 600; }
 .expert-card .cred { font-size: 13px; font-weight: 600; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-top: 4px; }
@@ -431,7 +431,7 @@ section { padding: 96px 0 0; }
 .ship-progress { margin-bottom: 16px; }
 .ship-msg { font-size: 13px; font-weight: 600; display: block; margin-bottom: 8px; }
 .ship-msg.unlocked { color: var(--gold); }
-.progress-track { height: 6px; background: rgba(242, 239, 230, 0.12); border-radius: 3px; overflow: hidden; }
+.progress-track { height: 6px; background: var(--line-soft); border-radius: 3px; overflow: hidden; }
 .progress-bar { height: 100%; background: var(--gold-grad); border-radius: 3px; transition: width 0.3s ease; }
 .drawer-subtotal {
   display: flex; justify-content: space-between;
@@ -567,7 +567,7 @@ section { padding: 96px 0 0; }
 
 .order-success { text-align: center; padding: 80px 0 40px; }
 .success-check {
-  width: 72px; height: 72px; border-radius: 50%; background: var(--gold-grad);
+  width: 72px; height: 72px; border-radius: 50%; background: var(--evergreen-deep);
   display: flex; align-items: center; justify-content: center; margin: 0 auto 28px;
 }
 .order-success h1 { font-size: 42px; }
@@ -626,10 +626,13 @@ section { padding: 96px 0 0; }
   .form-row { grid-template-columns: 1fr; }
 }
 
-/* ============ Gold accents (solid metallic, text stays ivory) ============ */
+/* ============ Gold accents (accent only, canvas is light ivory now) ============ */
+/* .promo-text h2 stays white here on purpose: it sits over the dark green
+   overlay + photo in the hero promo cards, not on the light page canvas. */
 .promo-text h2 { color: #fff; }
 .eyebrow { color: var(--gold); }
-.main-nav a:hover, .nav-about:hover, .footer-col a:hover { color: var(--gold); }
+.main-nav a:hover, .nav-about:hover { color: var(--gold); }
+.footer-col a:hover { color: var(--gold); } /* footer stays deep green, gold pops there */
 .card-price strong { color: var(--gold); }
 .drawer-subtotal, .summary-grand { color: var(--gold); }
 .cat-shop, .text-btn { color: var(--gold); }
