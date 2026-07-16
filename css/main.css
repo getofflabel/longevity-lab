@@ -11,13 +11,13 @@
   --white: #3A4A40;             /* raised panels: lighter matte green */
   --ink: rgba(242, 239, 230, 0.95);
   --ink-soft: rgba(242, 239, 230, 0.62);
-  --line: rgba(242, 239, 230, 0.18);
-  --line-soft: rgba(242, 239, 230, 0.1);
+  --line: rgba(198, 161, 91, 0.35);
+  --line-soft: rgba(198, 161, 91, 0.2);
   --evergreen: #2F3E33;
   --evergreen-deep: #222D26;
   --evergreen-mid: #3D5244;
   --gold: #C6A15B;
-  --gold-grad: linear-gradient(135deg, #A87F3D 0%, #E7CD85 48%, #C6A15B 100%);
+  --gold-grad: #BFA05C;
   --footer-bg: #1A231D;
   --radius: 22px;
   --pill: 48px;
@@ -58,7 +58,7 @@ section { padding: 96px 0 0; }
 .btn-primary { background: var(--gold-grad); color: var(--evergreen-deep); }
 .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35); }
 .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
-.btn-secondary { background: var(--white); color: var(--ink); border: 1px solid rgba(16, 21, 15, 0.15); }
+.btn-secondary { background: var(--white); color: var(--ink); border: 1px solid rgba(198, 161, 91, 0.4); }
 .btn-secondary:hover { border-color: rgba(16, 21, 15, 0.35); }
 .text-btn {
   font-size: 14px; font-weight: 600; text-decoration: underline;
@@ -292,7 +292,7 @@ section { padding: 96px 0 0; }
   border: 1px solid var(--line-soft); padding: 30px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.expert-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(16, 21, 15, 0.08); }
+.expert-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(242, 239, 230, 0.12); }
 .avatar {
   width: 72px; height: 72px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
@@ -431,7 +431,7 @@ section { padding: 96px 0 0; }
 .ship-progress { margin-bottom: 16px; }
 .ship-msg { font-size: 13px; font-weight: 600; display: block; margin-bottom: 8px; }
 .ship-msg.unlocked { color: var(--gold); }
-.progress-track { height: 6px; background: rgba(16, 21, 15, 0.08); border-radius: 3px; overflow: hidden; }
+.progress-track { height: 6px; background: rgba(242, 239, 230, 0.12); border-radius: 3px; overflow: hidden; }
 .progress-bar { height: 100%; background: var(--gold-grad); border-radius: 3px; transition: width 0.3s ease; }
 .drawer-subtotal {
   display: flex; justify-content: space-between;
@@ -445,12 +445,12 @@ section { padding: 96px 0 0; }
 .shop-sub { margin-top: 8px; font-size: 15px; color: var(--ink-soft); }
 .chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; align-items: center; }
 .chip {
-  border: 1px solid rgba(16, 21, 15, 0.15); border-radius: var(--pill);
+  border: 1px solid rgba(198, 161, 91, 0.4); border-radius: var(--pill);
   background: var(--white); padding: 9px 18px;
   font-size: 14px; font-weight: 600;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
-.chip:hover { border-color: rgba(16, 21, 15, 0.4); }
+.chip:hover { border-color: rgba(198, 161, 91, 0.85); }
 .chip.active { background: var(--gold-grad); color: var(--evergreen-deep); border-color: transparent; }
 .chip-sep { width: 1px; height: 22px; background: var(--line); margin: 0 4px; }
 .product-grid {
@@ -489,7 +489,7 @@ section { padding: 96px 0 0; }
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   position: relative;
 }
-.option-card:hover { border-color: rgba(16, 21, 15, 0.4); }
+.option-card:hover { border-color: rgba(198, 161, 91, 0.85); }
 .option-card.selected { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
 .option-card input { position: absolute; opacity: 0; pointer-events: none; }
 .option-title { display: block; font-size: 16px; font-weight: 600; }
@@ -625,3 +625,25 @@ section { padding: 96px 0 0; }
   .goal-chev { display: none; }
   .form-row { grid-template-columns: 1fr; }
 }
+
+/* ============ Matte gold enrichment ============ */
+h1, h2 { color: var(--gold); }
+.promo-text h2 { color: #fff; }
+.wordmark, .footer-wordmark { color: var(--gold); }
+.footer-col h4 { color: var(--gold); }
+.eyebrow { color: var(--gold); }
+.main-nav a:hover, .nav-about:hover, .footer-col a:hover { color: var(--gold); }
+.card-sub, .pdp-subtitle { color: var(--gold); }
+.card-price strong { color: var(--gold); }
+.drawer-subtotal, .summary-grand { color: var(--gold); }
+.cat-shop, .text-btn { color: var(--gold); }
+.acc-icon { color: var(--gold); }
+.crumb-here { color: var(--gold); }
+.announce-btn { border-color: rgba(198, 161, 91, 0.8); color: var(--gold); }
+.btn-secondary:hover { border-color: var(--gold); }
+.chip:hover { border-color: var(--gold); }
+.goal-tile strong { color: var(--ink); }
+.stat-block strong { color: var(--gold); }
+.option-title { color: var(--gold); }
+.drawer-item-name { color: var(--ink); }
+.form-section h2, .order-summary h2, .drawer-head h3 { color: var(--gold); }
